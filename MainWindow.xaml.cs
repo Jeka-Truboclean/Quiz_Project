@@ -21,6 +21,7 @@ namespace Quiz
             //ikijnjnjnj
             //jjjjj
             //Hi from Jeka
+            //Hi from Mira
             InitializeComponent();
         }
     }
