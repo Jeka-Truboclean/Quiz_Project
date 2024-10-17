@@ -19,6 +19,7 @@ namespace Quiz
         public MainWindow()
         {
             //ikijnjnjnj
+            //jjjjj
             InitializeComponent();
         }
     }
