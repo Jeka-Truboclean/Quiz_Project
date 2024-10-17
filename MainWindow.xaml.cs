@@ -20,6 +20,7 @@ namespace Quiz
         {
             //ikijnjnjnj
             //jjjjj
+            //Hi from Jeka
             InitializeComponent();
         }
     }
