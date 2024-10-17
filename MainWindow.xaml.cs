@@ -18,10 +18,8 @@ namespace Quiz
     {
         public MainWindow()
         {
-            //ikijnjnjnj
-            //jjjjj
-            //Hi from Jeka
-            //Hi from Mira
+//Cleared 
+            
             InitializeComponent();
         }
     }
