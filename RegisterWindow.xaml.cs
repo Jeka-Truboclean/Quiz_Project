@@ -21,6 +21,8 @@ namespace Quiz
     {
         public RegisterWindow()
         {
+
+
             InitializeComponent();
             comboBox1.Items.Add("Teacher");
             comboBox1.Items.Add("Student");
