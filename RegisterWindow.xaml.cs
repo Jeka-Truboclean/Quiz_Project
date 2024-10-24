@@ -15,21 +15,18 @@ using System.Windows.Shapes;
 namespace Quiz
 {
     /// <summary>
-    /// Логика взаимодействия для RegisterWindow.xaml
+    /// Interaction logic for RegisterWindow.xaml
     /// </summary>
     public partial class RegisterWindow : Window
     {
         public RegisterWindow()
         {
-
-
             InitializeComponent();
-            comboBox1.Items.Add("Teacher");
-            comboBox1.Items.Add("Student");
-
+            comboBox1.Items.Add("student");
+            comboBox1.Items.Add("teacher");
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
