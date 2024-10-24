@@ -22,6 +22,19 @@ namespace Quiz
         public RegisterWindow()
         {
             InitializeComponent();
+            comboBox1.Items.Add("Teacher");
+            comboBox1.Items.Add("Student");
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

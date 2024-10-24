@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
         mc:Ignorable="d"
-        Title="EnterWindow" Height="375" Width="545">
+        Title="EnterWindow" Height="375" Width="545" ResizeMode="NoResize">
     <Grid Background="#FF5E2F86">
         <Grid.RowDefinitions>
             <RowDefinition Height="83*"/>
@@ -14,9 +14,9 @@
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="98" Width="268" Margin="0,10,0,0" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,48,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="68"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Center" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="110"/>
-        <Button x:Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,195,0,0" Grid.Row="1" VerticalAlignment="Top" Height="46" Width="234" Background="#FF3B1C61" FontSize="24" FontWeight="Bold" BorderBrush="#00707070"/>
-        <TextBox HorizontalAlignment="Left" Margin="154,48,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3"/>
-        <TextBox HorizontalAlignment="Left" Margin="154,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3"/>
+        <Button x:Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,195,0,0" Grid.Row="1" VerticalAlignment="Top" Height="46" Width="234" Background="#FF3B1C61" FontSize="24" FontWeight="Bold" BorderBrush="#00707070" Click="EnterButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="154,48,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
+        <TextBox HorizontalAlignment="Left" Margin="154,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
 
     </Grid>
 </Window>

@@ -28,5 +28,10 @@ namespace Quiz
         {
 
         }
+
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
