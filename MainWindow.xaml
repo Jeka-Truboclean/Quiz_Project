@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
-        mc:Ignorable="d" Height="440" Width="656" Icon="/logo.png" ResizeMode="NoResize">
+        mc:Ignorable="d" Height="440" Width="656" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -19,9 +19,10 @@
             <RowDefinition Height="186*"/>
             <RowDefinition Height="62*"/>
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="98" Grid.Row="1" Width="268"/>
-        <Button Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,29,0,0" Grid.Row="2" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="EnterButton_Click"/>
-        <Button Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Margin="0,46,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="RegisterButton_Click"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="98" Grid.Row="1" Width="268" Margin="0,93,0,0" Grid.RowSpan="3"/>
+        <Button Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="EnterButton_Click"/>
+        <Button Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Margin="0,91,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="RegisterButton_Click"/>
+        <Image HorizontalAlignment="Left" Height="169" Margin="244,0,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="144" Source="/Images/logo.png" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>
