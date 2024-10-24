@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Quiz.Models;
+using System;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Quiz.ApplicationContexts;
 
 namespace Quiz
 {
@@ -18,8 +21,12 @@ namespace Quiz
     {
         public MainWindow()
         {
-//Cleared 
-            
+            using (var context = new ApplicationContext())
+            {
+                // Добовление чего либо в базу
+            }
+
+
             InitializeComponent();
         }
     }
