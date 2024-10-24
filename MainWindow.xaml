@@ -4,9 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" Height="440" Width="656" Icon="/logo.png">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF5E2F86" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="114*"/>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="186*"/>
+            <RowDefinition Height="62*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="98" Grid.Row="1" Width="268"/>
+        <Button Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,29,0,0" Grid.Row="2" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="EnterButton_Click"/>
+        <Button Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Margin="0,46,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="RegisterButton_Click"/>
 
     </Grid>
 </Window>

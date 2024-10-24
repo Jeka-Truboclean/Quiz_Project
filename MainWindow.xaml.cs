@@ -29,5 +29,20 @@ namespace Quiz
 
             InitializeComponent();
         }
+
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            EnterWindow enterWindow =new EnterWindow();
+            enterWindow.ShowDialog();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            RegisterWindow registerWindow=new RegisterWindow();
+            registerWindow.Show();
+        }
     }
 }
