@@ -77,5 +77,13 @@ namespace Quiz
                 this.Close();  // Закроем окно регистрации после успешной регистрации
             }
         }
+
+        // Возврат на начальное меню
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }

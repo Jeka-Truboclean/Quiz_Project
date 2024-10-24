@@ -33,7 +33,6 @@ namespace Quiz
         private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-
             EnterWindow enterWindow =new EnterWindow();
             enterWindow.ShowDialog();
         }
@@ -42,7 +41,7 @@ namespace Quiz
         {
             this.Hide();
             RegisterWindow registerWindow=new RegisterWindow();
-            registerWindow.Show();
+            registerWindow.ShowDialog();
         }
     }
 }
