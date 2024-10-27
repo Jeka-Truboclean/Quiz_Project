@@ -37,7 +37,7 @@ namespace Quiz
         {
             // Получение данных из текстовых полей
             string login = LoginTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string password = PasswordTextBox.Password;
             string role = RoleComboBox.SelectedItem?.ToString();
 
             // Проверка, что поля не пустые

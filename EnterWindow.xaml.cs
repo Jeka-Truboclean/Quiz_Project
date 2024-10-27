@@ -34,7 +34,7 @@ namespace Quiz
         {
             // Получение данных из полей
             string login = LoginTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string password = PasswordTextBox.Password;
 
             // Проверка, что поля не пустые
             if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))

@@ -11,13 +11,13 @@
             <RowDefinition Height="83*"/>
             <RowDefinition Height="276*"/>
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="50" Width="190" Margin="0,13,0,0"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="58" Width="263"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,48,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="68"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Center" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="110"/>
         <Button x:Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,195,0,0" Grid.Row="1" VerticalAlignment="Top" Height="46" Width="234" Background="#FF3B1C61" FontSize="24" FontWeight="Bold" BorderBrush="#00707070" Click="EnterButton_Click"/>
         <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Margin="154,48,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="154,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="308" Background="#7F9D78B3" TextChanged="TextBox_TextChanged" Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
-        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="10,221,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="70" Background="#FF3B1C61" FontSize="15" FontWeight="Bold" BorderBrush="#00707070" Click="BackButton_Click"/>
+        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="23,221,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="70" Background="#FF3B1C61" FontSize="15" FontWeight="Bold" BorderBrush="#00707070" Click="BackButton_Click"/>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="154,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="308" Background="#7F9D78B3" Height="30" BorderBrush="#00ABADB3" FontSize="18"/>
 
     </Grid>
 </Window>

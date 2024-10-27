@@ -19,7 +19,7 @@
             <RowDefinition Height="186*"/>
             <RowDefinition Height="62*"/>
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="45" Grid.Row="2" Width="190" Margin="0,10,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="57" Grid.Row="2" Width="300" Margin="210,0,0,0"/>
         <Button Name="EnterButton" Content="Enter" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="EnterButton_Click"/>
         <Button Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Margin="0,91,0,0" Grid.Row="3" VerticalAlignment="Top" Height="49" Width="236" Background="#FF5F398E" FontSize="24" FontWeight="Bold" Click="RegisterButton_Click"/>
         <Image HorizontalAlignment="Left" Height="169" Margin="244,0,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="144" Source="/Images/logo.png" Stretch="UniformToFill"/>

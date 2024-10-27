@@ -11,14 +11,14 @@
             <RowDefinition Height="75*"/>
             <RowDefinition Height="284*"/>
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="50" Width="190" Margin="180,14,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Qwizard" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="64" Width="254" Margin="157,15,0,0"/>
         <TextBlock HorizontalAlignment="Left" Margin="28,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="68"/>
         <TextBlock HorizontalAlignment="Left" Margin="28,104,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="110"/>
         <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Margin="157,29,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#7F9D78B3"  Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="157,105,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Background="#7F9D78B3"  Height="29" BorderBrush="#00ABADB3" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="28,160,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Role:" VerticalAlignment="Top" Background="#7F9D78B3" FontWeight="Bold" FontSize="22" Width="55"/>
-        <ComboBox x:Name="RoleComboBox" HorizontalAlignment="Left" Margin="157,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="308" Height="29" SelectionChanged="comboBox1_SelectionChanged" SelectedIndex="0" FontSize="20"/>
+        <ComboBox x:Name="RoleComboBox" HorizontalAlignment="Left" Margin="157,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="308" Height="29" SelectionChanged="comboBox1_SelectionChanged" SelectedIndex="0" FontSize="20" Background="#7F9D78B3"/>
         <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="157,219,0,0" Grid.Row="1" VerticalAlignment="Top" Height="49" Width="236" Background="#FF3B1C61" FontSize="24" FontWeight="Bold" BorderBrush="#00707070" Click="RegisterButton_Click"/>
-        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="10,249,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="70" Background="#FF3B1C61" FontSize="15" FontWeight="Bold" BorderBrush="#00707070" Click="BackButton_Click"/>
+        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="28,264,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="70" Background="#FF3B1C61" FontSize="15" FontWeight="Bold" BorderBrush="#00707070" Click="BackButton_Click"/>
+        <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Left" Margin="157,104,0,0" Grid.Row="1" VerticalAlignment="Top" Width="308" Background="#7F9D78B3" Height="30" BorderBrush="#00ABADB3" FontSize="18"/>
     </Grid>
 </Window>
