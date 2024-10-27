@@ -55,6 +55,16 @@ namespace Quiz
                     MessageBox.Show($"Welcome, {user.Login}!", "Seccess", MessageBoxButton.OK, MessageBoxImage.Information);
                     //this.DialogResult = true;  // Можно использовать, если окно вызвано как диалоговое
     /*!!!*/         this.Close();  // Это нужно заменить на открытие следующего окна с условием того если это учитель или ученик
+                    if (user.Role == "teacher")
+                    {
+                        TeacherMainWindow teacherWindow=new TeacherMainWindow();
+                        teacherWindow.Show();
+                    }
+                    else
+                    {
+                        StudentMainWindow studentWindow = new StudentMainWindow();
+                        studentWindow.Show();
+                    }
                 }
                 else
                 {

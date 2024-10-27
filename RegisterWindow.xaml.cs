@@ -75,6 +75,16 @@ namespace Quiz
 
                 // Закрытие окна регистрации или очистка полей
                 this.Close();  // Закроем окно регистрации после успешной регистрации
+                if (newUser.Role == "teacher")
+                {
+                    TeacherMainWindow teacherWindow = new TeacherMainWindow();
+                    teacherWindow.Show();
+                }
+                else
+                {
+                    StudentMainWindow studentWindow = new StudentMainWindow();
+                    studentWindow.Show();
+                }
             }
         }
 

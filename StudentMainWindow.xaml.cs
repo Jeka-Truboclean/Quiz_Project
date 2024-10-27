@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 namespace Quiz
 {
     /// <summary>
-    /// Interaction logic for TeacherMainWindow.xaml
+    /// Interaction logic for StudentMainWindow.xaml
     /// </summary>
-    public partial class TeacherMainWindow : Window
+    public partial class StudentMainWindow : Window
     {
-        public TeacherMainWindow()
+        public StudentMainWindow()
         {
             InitializeComponent();
-            menu.Items.Add(new MenuItem() { Name="Help"});
         }
-
-        
     }
 }
