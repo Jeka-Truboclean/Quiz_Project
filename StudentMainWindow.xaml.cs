@@ -23,5 +23,10 @@ namespace Quiz
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("To pass a test pess The Take Test Button ","Help",MessageBoxButton.OK,MessageBoxImage.Information);
+        }
     }
 }

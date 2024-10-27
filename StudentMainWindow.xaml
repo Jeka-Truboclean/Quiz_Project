@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="StudentMainWindow" Height="450" Width="800">
     <Grid>
-        <Menu Name="menu" Margin="0,409,0,0" Background="#FFB7B7B7"/>
+        <Menu Margin="0,409,0,0" Background="#FFA7A5A5">
+           
+            <MenuItem Header="Help" Click="MenuItem_Click">
+                
+            </MenuItem>
+        </Menu>
         <StackPanel Margin="0,0,0,396" Background="#FF5E2F86">
             <TextBlock TextWrapping="Wrap" Text="Qwizard" FontSize="30" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="42" Width="152"/>
         </StackPanel>

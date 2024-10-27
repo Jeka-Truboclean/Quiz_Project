@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="TeacherMainWindow" Height="450" Width="774" Background="White">
     <Grid>
-        <Menu Name="menu" Margin="0,409,0,0" Background="#FFB7B7B7"/>
         <StackPanel Margin="0,0,0,396" Background="#FF5E2F86">
             <TextBlock TextWrapping="Wrap" Text="Qwizard" FontSize="30" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="42" Width="152"/>
         </StackPanel>
-        <WrapPanel Margin="0,42,26,30"/>
+        <WrapPanel Margin="0,42,26,67"/>
         <ScrollBar HorizontalAlignment="Left" Margin="748,41,0,0" VerticalAlignment="Top" Height="363" Background="#7F9D78B3" Width="16"/>
+        <Menu Margin="0,409,0,0" Background="#FFA7A5A5">
+
+            <MenuItem Header="Help" Click="MenuItem_Click"/>
+        </Menu>
+        <Button Content="Create Test" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Height="37" Width="206" Background="#FF5E2F86" BorderBrush="Black" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift SemiCondensed"/>
 
     </Grid>
 </Window>

@@ -22,9 +22,11 @@ namespace Quiz
         public TeacherMainWindow()
         {
             InitializeComponent();
-            menu.Items.Add(new MenuItem() { Name="Help"});
+        }
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("To create a test press The Create Test Button", "Help", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        
     }
 }
