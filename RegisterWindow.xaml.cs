@@ -77,12 +77,12 @@ namespace Quiz
                 this.Close();  // Закроем окно регистрации после успешной регистрации
                 if (newUser.Role == "teacher")
                 {
-                    TeacherMainWindow teacherWindow = new TeacherMainWindow();
+                    TeacherMainWindow teacherWindow = new TeacherMainWindow(newUser);
                     teacherWindow.Show();
                 }
                 else
                 {
-                    StudentMainWindow studentWindow = new StudentMainWindow();
+                    StudentMainWindow studentWindow = new StudentMainWindow(newUser);
                     studentWindow.Show();
                 }
             }

@@ -1,5 +1,4 @@
-﻿using Quiz.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,21 +15,18 @@ using System.Windows.Shapes;
 namespace Quiz
 {
     /// <summary>
-    /// Interaction logic for StudentMainWindow.xaml
+    /// Interaction logic for AddQuestionWindow.xaml
     /// </summary>
-    public partial class StudentMainWindow : Window
+    public partial class AddQuestionWindow : Window
     {
-        User user;
-        public StudentMainWindow(User user)
+        public AddQuestionWindow()
         {
-            this.user = user;
             InitializeComponent();
-            userTextBox.Text=user.Login;
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void EnterButton_Copy_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("To pass a test pess The Take Test Button ","Help",MessageBoxButton.OK,MessageBoxImage.Information);
+
         }
     }
 }

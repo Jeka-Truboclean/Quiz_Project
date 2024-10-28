@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,28 @@ namespace Quiz
     /// </summary>
     public partial class TeacherMainWindow : Window
     {
-        public TeacherMainWindow()
+        User user;
+        public TeacherMainWindow(User user)
         {
             InitializeComponent();
+            this.user = user;
+            userTextBox.Text = user.Login;
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("To create a test press The Create Test Button", "Help", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            CreateTestWindow testWindow = new CreateTestWindow();
+            testWindow.Show();
+        }
     }
 }

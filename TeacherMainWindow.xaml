@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
         mc:Ignorable="d"
-        Title="TeacherMainWindow" Height="450" Width="774" Background="White">
+        Title="TeacherMainWindow" Height="450" Width="774" Background="White" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Margin="0,0,0,396" Background="#FF5E2F86">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="310*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,9" Background="#FF5E2F86">
             <TextBlock TextWrapping="Wrap" Text="Qwizard" FontSize="30" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="42" Width="152"/>
-        </StackPanel>
-        <WrapPanel Margin="0,42,26,67"/>
-        <ScrollBar HorizontalAlignment="Left" Margin="748,41,0,0" VerticalAlignment="Top" Height="363" Background="#7F9D78B3" Width="16"/>
-        <Menu Margin="0,409,0,0" Background="#FFA7A5A5">
+        </Grid>
+        <ScrollBar HorizontalAlignment="Left" Margin="748,41,0,0" VerticalAlignment="Top" Height="363" Background="#7F9D78B3" Width="17" Grid.RowSpan="3"/>
+        <Menu Margin="0,50,0,0" Background="#FFA7A5A5" Grid.Row="2">
 
-            <MenuItem Header="Help" Click="MenuItem_Click"/>
+            <MenuItem Header="Help" Click="MenuItem_Click" FontWeight="Bold" FontSize="14"/>
         </Menu>
-        <Button Content="Create Test" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Height="37" Width="206" Background="#FF5E2F86" BorderBrush="Black" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift SemiCondensed"/>
+        <Button Content="Create Test" HorizontalAlignment="Center" Margin="0,8,0,0" VerticalAlignment="Top" Height="37" Width="206" Background="#FF5E2F86" BorderBrush="Black" FontSize="30" FontWeight="Bold" FontFamily="Bahnschrift SemiCondensed" Grid.Row="2" Click="Button_Click"/>
+        <TextBox Name="userTextBox" TextWrapping="Wrap" Text="User:" RenderTransformOrigin="0.504,0.455" Margin="660,50,0,7" Grid.Row="2" Background="#FFA7A5A5" BorderBrush="#00ABADB3" FontWeight="Bold" TextDecorations="Underline" TextChanged="TextBox_TextChanged" FontSize="14"/>
 
     </Grid>
 </Window>

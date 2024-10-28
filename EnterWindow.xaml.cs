@@ -57,12 +57,12 @@ namespace Quiz
                     this.Close();  
                     if (user.Role == "teacher")
                     {
-                        TeacherMainWindow teacherWindow=new TeacherMainWindow();
+                        TeacherMainWindow teacherWindow=new TeacherMainWindow(user);
                         teacherWindow.Show();
                     }
                     else
                     {
-                        StudentMainWindow studentWindow = new StudentMainWindow();
+                        StudentMainWindow studentWindow = new StudentMainWindow(user);
                         studentWindow.Show();
                     }
                 }
