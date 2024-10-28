@@ -12,8 +12,8 @@ using Quiz.ApplicationContexts;
 namespace Quiz.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20241024134831_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241028110443_MakeImageNullable")]
+    partial class MakeImageNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace Quiz.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
 
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
@@ -56,7 +59,6 @@ namespace Quiz.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<byte[]>("Image")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("QuestionType")

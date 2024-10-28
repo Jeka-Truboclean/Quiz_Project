@@ -27,7 +27,7 @@ namespace Quiz
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+             
         }
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
@@ -54,7 +54,7 @@ namespace Quiz
                     // Пользователь найден
                     MessageBox.Show($"Welcome, {user.Login}!", "Seccess", MessageBoxButton.OK, MessageBoxImage.Information);
                     //this.DialogResult = true;  // Можно использовать, если окно вызвано как диалоговое
-    /*!!!*/         this.Close();  // Это нужно заменить на открытие следующего окна с условием того если это учитель или ученик
+                    this.Close();  
                     if (user.Role == "teacher")
                     {
                         TeacherMainWindow teacherWindow=new TeacherMainWindow();
