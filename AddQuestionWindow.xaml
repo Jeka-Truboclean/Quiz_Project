@@ -22,37 +22,18 @@
             <RowDefinition Height="56*"/>
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Left" Margin="23,0,0,0" TextWrapping="Wrap" Text="Question:" VerticalAlignment="Center" Width="70" FontWeight="Bold" Height="21" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="98,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="558" Height="30"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,0,0,0" TextWrapping="Wrap" Text="Answer Type:" VerticalAlignment="Center" Width="94" FontWeight="Bold" Height="21" FontSize="14" Grid.Row="1"/>
-        <RadioButton Content="One" HorizontalAlignment="Left" Margin="237,5,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Background="White" Height="18" Width="46"/>
-        <RadioButton Content="Multiple" HorizontalAlignment="Left" Margin="377,5,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Height="18" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,40,0,0" TextWrapping="Wrap" Text="Question:" VerticalAlignment="Top" Width="70" FontWeight="Bold" Height="21" FontSize="14" Grid.RowSpan="2"/>
+        <TextBox Name="QuestionTextBox" HorizontalAlignment="Left" Margin="98,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="558" Height="30" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="23,31,0,0" TextWrapping="Wrap" Text="Answers:" VerticalAlignment="Top" Width="94" FontWeight="Bold" Height="21" FontSize="14" Grid.Row="1" Grid.RowSpan="2"/>
-
-        <ListBox HorizontalContentAlignment="Stretch"  Name="listBox1" Margin="23,21,31,0" Grid.Row="2" Height="100" VerticalAlignment="Top" Background="#FFE2E0E0">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock>
-                        <Run FontWeight="Bold" Text="Answer"/>
-                        </TextBlock>
-                        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="58,56,0,0" Grid.Row="5" VerticalAlignment="Top"/>
-
-
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <TextBox Name="AnswerTextBox" HorizontalAlignment="Left" Margin="23,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="658" Background="#FFD6D4D4" Height="39"/>
+        <TextBox Name="AnswerTextBox" HorizontalAlignment="Left" Margin="20,117,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="658" Background="#FFD6D4D4" Height="39" Grid.RowSpan="2"/>
         <Button x:Name="EnterButton" Content="Add Answer" HorizontalAlignment="Left" Margin="532,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="149" Background="#7F7C40C7" FontSize="14" FontWeight="Bold" BorderBrush="Black" Click="EnterButton_Click" />
         <TextBlock HorizontalAlignment="Left" Margin="23,32,0,0" TextWrapping="Wrap" Text="Image:" VerticalAlignment="Top" Width="94" FontWeight="Bold" Height="21" FontSize="14" Grid.Row="4" Grid.RowSpan="2"/>
         <TextBox Name="pathTextBox" HorizontalAlignment="Left" Margin="70,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="558" Height="27" Grid.Row="5"/>
         <Button x:Name="EnterButton_Copy" Content="Add Question" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="31" Width="217" Background="#FF3B1C61" FontSize="22" FontWeight="Bold" BorderBrush="#00707070" Click="EnterButton_Copy_Click" />
         <Button Content="..." HorizontalAlignment="Left" Margin="633,3,0,0" Grid.Row="5" VerticalAlignment="Top" Width="37" FontWeight="Bold" FontSize="16" Background="#FFE6E4E4" Click="Button_Click"/>
+        <ListBox Name="listBox1" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="22,27,34,15" Grid.RowSpan="2"/>
+        <TextBox Name="TrueTextBox" HorizontalAlignment="Left" Margin="128,4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.56,0.088"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,3,0,0" Grid.Row="4" TextWrapping="Wrap" Text="True index" VerticalAlignment="Top" Width="70"/>
 
     </Grid>
 </Window>
