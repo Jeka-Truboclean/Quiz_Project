@@ -43,6 +43,13 @@ namespace Quiz
         {
             TestNameTextBlock.Text = _test.Name;
 
+            // Проверка на наличие вопросов
+            if (_test.Questions == null || !_test.Questions.Any())
+            {
+                MessageBox.Show("No questions available.");
+                return;
+            }
+
             foreach (var question in _test.Questions)
             {
                 var questionPanel = new StackPanel { Margin = new Thickness(0, 10, 0, 20) };
@@ -58,22 +65,22 @@ namespace Quiz
                 questionPanel.Children.Add(questionTextBlock);
 
                 // Создаем элементы для выбора ответов в зависимости от типа вопроса
-                if (question.QuestionType == "Single Answer")
+                if (question.QuestionType == "Single Answer" || question.QuestionType == "Один ответ")
                 {
-                    //var answerGroup = new RadioButtonGroup();
                     foreach (var answer in question.Answers)
                     {
                         var radioButton = new RadioButton
                         {
                             Content = answer.Text,
                             Tag = answer.Id,
+                            GroupName = $"Question_{question.Id}",
                             Margin = new Thickness(0, 2, 0, 2)
                         };
                         radioButton.Checked += AnswerSelected;
                         questionPanel.Children.Add(radioButton);
                     }
                 }
-                else if (question.QuestionType == "Multiple Answers")
+                else if (question.QuestionType == "Multiple Answers" || question.QuestionType == "Несколько ответов")
                 {
                     foreach (var answer in question.Answers)
                     {
@@ -92,6 +99,8 @@ namespace Quiz
                 QuestionsStackPanel.Children.Add(questionPanel);
             }
         }
+
+
 
         private void AnswerSelected(object sender, RoutedEventArgs e)
         {

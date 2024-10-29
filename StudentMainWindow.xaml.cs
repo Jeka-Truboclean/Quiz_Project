@@ -49,7 +49,7 @@ namespace Quiz
             {
                 int testId = (int)button.Tag;
 
-                // Загрузите тест вместе с вопросами и ответами
+                // Загрузка теста вместе с вопросами и ответами
                 var test = _context.Tests
                     .Include(t => t.Questions)
                         .ThenInclude(q => q.Answers)
@@ -57,7 +57,7 @@ namespace Quiz
 
                 if (test != null)
                 {
-                    // Открываем окно прохождения теста, передавая загруженный тест
+                    // Открываем окно для прохождения теста и передаем данные
                     var testTakingWindow = new TestTakingWindow(_context, test, user);
                     testTakingWindow.ShowDialog();
                 }
@@ -67,6 +67,7 @@ namespace Quiz
                 }
             }
         }
+
 
 
         private void MenuItem_Help_Click(object sender, RoutedEventArgs e)
