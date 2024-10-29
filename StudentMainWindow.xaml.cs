@@ -1,4 +1,5 @@
-﻿using Quiz.ApplicationContexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Quiz.ApplicationContexts;
 using Quiz.Models;
 using System;
 using System.Collections.Generic;
@@ -48,26 +49,25 @@ namespace Quiz
             {
                 int testId = (int)button.Tag;
 
-                // Переход к странице теста
-                //MessageBox.Show($"Starting test with ID: {testId}");
+                // Загрузите тест вместе с вопросами и ответами
+                var test = _context.Tests
+                    .Include(t => t.Questions)
+                        .ThenInclude(q => q.Answers)
+                    .FirstOrDefault(t => t.Id == testId);
 
-                var selectedTest = _context.Tests
-                    .Where(t => t.Id == testId)
-                    .FirstOrDefault();
-
-                if (selectedTest != null)
+                if (test != null)
                 {
-                    // Открываем окно для прохождения теста
-                    var testTakingWindow = new TestTakingWindow(_context, selectedTest, user);
+                    // Открываем окно прохождения теста, передавая загруженный тест
+                    var testTakingWindow = new TestTakingWindow(_context, test, user);
                     testTakingWindow.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Test not found!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Test not found.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-
             }
         }
+
 
         private void MenuItem_Help_Click(object sender, RoutedEventArgs e)
         {
