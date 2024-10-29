@@ -12,15 +12,40 @@
             <RowDefinition Height="311*"/>
             <RowDefinition Height="76*"/>
         </Grid.RowDefinitions>
-        <Grid Margin="0,0,0,9" Background="#FF5E2F86">
-            <TextBlock TextWrapping="Wrap" Text="Qwizard" FontSize="30" FontWeight="Bold" FontFamily="Rockwell Extra Bold" Height="42" Width="152"/>
+
+        <!-- Заголовок -->
+        <Grid Background="#FF5E2F86" Grid.Row="0">
+            <TextBlock Text="Qwizard" FontSize="30" FontWeight="Bold" FontFamily="Rockwell Extra Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
-        <ScrollBar HorizontalAlignment="Left" Margin="748,41,0,0" VerticalAlignment="Top" Height="363" Background="#7F9D78B3" Width="17" Grid.RowSpan="3"/>
-        <Menu Margin="0,50,0,0" Background="#FFA7A5A5" Grid.Row="2">
 
-            <MenuItem Header="Help" Click="MenuItem_Click" FontWeight="Bold" FontSize="14"/>
+        <!-- Плитки тестов -->
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="10,0,10,0">
+            <ItemsControl Name="TestsItemsControl" HorizontalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#FF8B4D9E" CornerRadius="10" Width="200" Height="150" Margin="10">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="5,5,5,0"/>
+                                <TextBlock Text="Description:" FontStyle="Italic" Margin="5,0,5,0"/>
+                                <TextBlock Text="{Binding Description}" TextAlignment="Center" Margin="5,0,5,5"/>
+                                <Button Content="Take Test" HorizontalAlignment="Center" Margin="5" Click="TakeTestButton_Click" Tag="{Binding Id}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Меню и пользовательская информация -->
+        <Menu Background="#FFA7A5A5" Grid.Row="2" HorizontalAlignment="Center" Margin="0,26,0,-2" Width="800">
+            <MenuItem Header="Help" Click="MenuItem_Help_Click" FontWeight="Bold" FontSize="14"/>
         </Menu>
-        <TextBox x:Name="userTextBox" TextWrapping="Wrap" Text="User:" RenderTransformOrigin="0.504,0.455" Background="#FFA7A5A5" BorderBrush="#00ABADB3" FontWeight="Bold" TextDecorations="Underline"  FontSize="14" Height="20" Width="114" Margin="676,50,10,6" Grid.Row="2"/>
-
+        <TextBlock Name="userTextBox" Text="User: " FontWeight="Bold" TextDecorations="Underline" FontSize="14" Background="#FFA7A5A5" Margin="0,38,64,0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top"/>
     </Grid>
 </Window>

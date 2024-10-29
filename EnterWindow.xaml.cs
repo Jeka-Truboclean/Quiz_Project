@@ -57,7 +57,7 @@ namespace Quiz
                     this.Close();  
                     if (user.Role == "teacher")
                     {
-                        TeacherMainWindow teacherWindow=new TeacherMainWindow(user);
+                        TeacherMainWindow teacherWindow = new TeacherMainWindow(user);
                         teacherWindow.Show();
                     }
                     else
