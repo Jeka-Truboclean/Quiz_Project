@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +29,18 @@ namespace Quiz
         private void EnterButton_Copy_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+           listBox1.Items.Add(AnswerTextBox.Text);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+                pathTextBox.Text = System.IO.Path.GetFileName(openFileDialog.FileName);
         }
     }
 }
