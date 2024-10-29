@@ -128,6 +128,7 @@ namespace Quiz
             {
                 var correctAnswerIds = question.Answers.Where(a => a.IsCorrect).Select(a => a.Id).ToList();
 
+                // Проверяем, что у пользователя правильные ответы
                 if (_selectedAnswers.ContainsKey(question.Id) && _selectedAnswers[question.Id].SequenceEqual(correctAnswerIds))
                 {
                     correctAnswersCount++;
@@ -138,16 +139,21 @@ namespace Quiz
             double scorePercentage = ((double)correctAnswersCount / totalQuestions) * 100;
             MessageBox.Show($"You scored: {scorePercentage}%", "Test Result");
 
-            // Сохранение результата(дорабатывую)
+            // Сохранение результата
             var result = new Result
             {
-                
+                TestId = _test.Id,
+                UserId = _user.Id,
+                Date = DateTime.Now,
+                Score = scorePercentage
             };
 
             _context.Results.Add(result);
             _context.SaveChanges();
 
+            // Закрытие окна после сохранения результата
             Close();
         }
+
     }
 }

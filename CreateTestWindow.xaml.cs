@@ -107,13 +107,13 @@ namespace Quiz
         {
             AddQuestionWindow addQuestionWindow = new AddQuestionWindow();
             addQuestionWindow.Show();
-            listBox.Items.Add(addQuestionWindow.question.Text);
+            //listBox.Items.Add(addQuestionWindow.question.Text);
         }
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
 
-            test = new Test() { Name = TitleTextBox.Text, Description = DescriptionTextBox.Text, Questions = questions };
+            //test = new Test() { Name = TitleTextBox.Text, Description = DescriptionTextBox.Text, Questions = questions };
         }
     }
 }
